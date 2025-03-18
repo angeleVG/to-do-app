@@ -1,8 +1,12 @@
 function SideBar () {
     return(
-    <div>
-    <p>This is the sidebar</p>
-    </div>
+    <aside className="side-navigation">
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    </aside>
     
     );
     }

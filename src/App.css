@@ -4,5 +4,16 @@ body {
 }
 
 .navigation {
-  border: solid red 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  background-color: azure;
+}
+
+.side-navigation {
+  position: absolute;
+  top:150px;
 }
