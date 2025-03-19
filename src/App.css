@@ -1,6 +1,5 @@
-body {
-  background-color: darkslateblue;
-  color: white;
+* {
+  border: 1px red solid;
 }
 
 .navigation {

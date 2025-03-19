@@ -1,6 +1,6 @@
 function Footer () {
     return(
-        <div>
+        <div className = "footer">
         <p>This project was done by Angèle and Santiago. <a href="https://github.com/angeleVG/to-do-app">Check the App here</a></p>
         </div>
     

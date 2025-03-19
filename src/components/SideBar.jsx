@@ -2,9 +2,8 @@ function SideBar () {
     return(
     <aside className="side-navigation">
     <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
     </ul>
     </aside>
     
