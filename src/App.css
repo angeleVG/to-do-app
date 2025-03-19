@@ -1,18 +1,58 @@
-* {
-  border: 1px red solid;
+*{
+border: 1px red solid;
+box-sizing: border-box; /* ensures borders and padding are calculated correctly */
+margin: 0;
+padding: 0;
+}
+
+body {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  background-color: azure;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+top: 0px; 
+left: 0px;
+width: 100%;
+background-color: azure;
+width: 100%;
+z-index: 1000; /* ensures navbar will always be above other elements */
+height: 60px;
+padding: 10px 20px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+
 .side-navigation {
-  position: absolute;
-  top:150px;
+background-color: lightgray;
+position: fixed; /* ensures sidebar stays left */
+top:60px;
+left: 0;
+width: 200px;
+height: calc(100vh - 60px); /* Sidebar fills left over space */
+padding: 20px;
+}
+
+.side-navigation li {
+  padding: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(213, 243, 229);
+  text-align: center;
+  padding: 10px;
 }
