@@ -13,6 +13,15 @@ function App() {
     { id: 3, task: "Buy a Yacht", isCompleted: false },
   ]);
 
+const addTask = () => {
+  const newTask = {id:"test new", task: "test task", isCompleted: false };
+  const copyList = [...myTasks];
+  copyList.push(newTask);
+  setMyTasks(copyList);
+};
+
+
+
 const deleteTask = () => {
 
   const copyList = [...myTasks];
@@ -21,12 +30,14 @@ const deleteTask = () => {
 
 };
 
+
+
 return (
   <>
     <NavBar />
     <SideBar />
-    <TaskList tasks={myTasks} />
-    <button>Add</button>
+    <TaskList tasks={myTasks} deleteTask={deleteTask}/>
+    <button onClick={addTask}>Add</button>
     <button onClick={deleteTask}>Remove</button>
     <Footer />
   </>
