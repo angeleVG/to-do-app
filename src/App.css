@@ -1,6 +1,7 @@
+/**
 *{
 border: 1px red solid;
-box-sizing: border-box; /* ensures borders and padding are calculated correctly */
+box-sizing: border-box; 
 margin: 0;
 padding: 0;
 }
@@ -21,7 +22,7 @@ left: 0px;
 width: 100%;
 background-color: azure;
 width: 100%;
-z-index: 1000; /* ensures navbar will always be above other elements */
+z-index: 1000; 
 height: 60px;
 padding: 10px 20px;
 }
@@ -35,11 +36,11 @@ padding: 10px 20px;
 
 .side-navigation {
 background-color: lightgray;
-position: fixed; /* ensures sidebar stays left */
+position: fixed; 
 top:60px;
 left: 0;
 width: 200px;
-height: calc(100vh - 60px); /* Sidebar fills left over space */
+height: calc(100vh - 60px); 
 padding: 20px;
 }
 
@@ -55,4 +56,10 @@ padding: 20px;
   background-color: rgb(213, 243, 229);
   text-align: center;
   padding: 10px;
+} 
+
+.main-list {
+  position: absolute;
+  margin: 0 auto;
 }
+/**
