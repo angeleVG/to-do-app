@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
+
 function SideBar () {
     return(
     <aside className="side-navigation">
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><Link to="/">Home</Link></li> {/* new link to Dashboard */}
+        <li><Link to="/tasks">Task List</Link></li> {/*  new link to Task List */}
+        <li><Link to="/about">About</Link></li> {/* new link to About page */}
     </ul>
     </aside>
     
