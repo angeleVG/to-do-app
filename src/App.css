@@ -67,3 +67,10 @@ padding: 20px;
   box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none; /* displaying li's without bullets */
+}
+
+h1 {
+  margin-bottom: 20px; /* create more space between titles and following content */
+}

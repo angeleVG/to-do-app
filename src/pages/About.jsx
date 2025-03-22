@@ -1,9 +1,8 @@
 function About() {
   return (
     <div>
-      <h1>About Page</h1>
-      <p>This page provides information about the project and team members.</p>
-      <p>Links to GitHub and LinkedIn can go here.</p>
+      <h1>Todology App</h1>
+      <p>A simple To-do app allowing the user to create and manage tasks, as well as check off (or uncheck) the existing tasks when completed.</p>
     </div>
   );
 }
