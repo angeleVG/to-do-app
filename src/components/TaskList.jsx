@@ -1,7 +1,7 @@
 function TaskList({ tasks, deleteTask }) { {/*added deleteTask as a prop*/}
     return (
       <main className="main-list">
-        <h1>Task List</h1>
+        <h1>To-Do List</h1>
         <ul>
           {tasks.map((task) => (
             <li key={task.id}>

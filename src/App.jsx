@@ -25,10 +25,10 @@ function App() {
     setMyTasks(copyList);
   };
 
-  const deleteTask = () => {
-    const copyList = [...myTasks];
-    copyList.pop();
-    setMyTasks(copyList);
+  // delete task based on ID
+  const deleteTask = (taskId) => {
+    const updatedTasks = myTasks.filter((task) => task.id !== taskId); // filter list and remove task with specific ID
+    setMyTasks(updatedTasks); // display new task list without the removed task
   };
 
   return (
@@ -47,8 +47,9 @@ function App() {
           <>
             <TaskList tasks={myTasks} deleteTask={deleteTask} />
             <button onClick={addTask}>Add</button>
-            <button onClick={deleteTask}>Remove</button>
+            <button onClick={deleteTask}>Remove</button>  {/* @santiago hey perhaps we could alter this into a remove all button? :D */}
           </>
+        
         }
       />
 
