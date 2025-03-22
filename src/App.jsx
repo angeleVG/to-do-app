@@ -1,8 +1,13 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";  // React Router setup
 import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
 import Footer from './components/Footer'
 import TaskList from './components/TaskList'
+import ItemDetails from "./pages/ItemDetails"; // new Item Details Page
+import About from "./pages/About"; // new about page
+import NotFound from "./pages/NotFound"; // new error page
+import Dashboard from "./pages/Dashboard"; // Corrected path for Dashboard
 import './App.css'
 
 function App() {
@@ -33,14 +38,18 @@ const deleteTask = () => {
 
 
 return (
-  <>
+  <Router>
     <NavBar />
     <SideBar />
+
+  <Routes>
     <TaskList tasks={myTasks} deleteTask={deleteTask}/>
     <button onClick={addTask}>Add</button>
     <button onClick={deleteTask}>Remove</button>
+    </Routes>
+
     <Footer />
-  </>
+  </Router>
 );
 }
 
