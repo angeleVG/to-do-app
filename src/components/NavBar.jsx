@@ -3,7 +3,7 @@ function NavBar() {
     <nav className = "navigation">
       <div className = "logo">
         <img src="placeholder_for_logo.png" alt="placeholder_for_logo" />
-        <span className = "app-name">The Best ToDo App out there :)</span>
+        <span className = "app-name">Todology</span>
       </div>
     </nav>
   );

@@ -35,7 +35,7 @@ function App() {
     <>
     <NavBar />
     <SideBar />
-    <div className="main-content">
+    <div className="main-content"> {/*ensures there is space for content*/}
     <Routes>
       {/* Route for Dashboard */}
       <Route path="/" element={<Dashboard />} />
