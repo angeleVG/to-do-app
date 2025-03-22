@@ -35,7 +35,7 @@ function App() {
     <>
     <NavBar />
     <SideBar />
-
+    <div className="main-content">
     <Routes>
       {/* Route for Dashboard */}
       <Route path="/" element={<Dashboard />} />
@@ -57,10 +57,10 @@ function App() {
 
       {/* Route for About */}
       <Route path="/about" element={<About />} />
-      {/* Catch-all Route for NotFound */}
+      {/* Route for NotFound */}
       <Route path="*" element={<NotFound />} />
     </Routes>
-
+</div>
     <Footer />
   </>
 );

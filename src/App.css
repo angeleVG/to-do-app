@@ -1,4 +1,4 @@
-/**
+
 *{
 border: 1px red solid;
 box-sizing: border-box; 
@@ -58,8 +58,9 @@ padding: 20px;
   padding: 10px;
 } 
 
-.main-list {
-  position: absolute;
-  margin: 0 auto;
+.main-content{
+  margin-left: 220px; 
+  padding: 20px;
+  flex: 1;
 }
-/**
+
