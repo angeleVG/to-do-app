@@ -1,8 +1,15 @@
-function Dashboard() {
+import TaskList from "../components/TaskList";
+
+function Dashboard({ tasks, deleteTask, addTask }) {
   return (
     <div>
-      <h1>Home/Dashboard Page</h1>
-      <p>Hey hey @Santiago, I'm wondering if the dashboard should only show basic task titles and the actual adjustable Task List should show in the Item details page. Let's discuss what should go where.</p>
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
+      <button onClick={addTask}>Add</button>
+      <button onClick={deleteTask}>Remove</button>
+      <form>
+        <input type="text" name="example" placeholder="Enter something" />
+  <button type="submit">Submit</button>
+</form>
     </div>
   );
 }
