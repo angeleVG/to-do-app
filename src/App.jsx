@@ -4,10 +4,9 @@ import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import TaskList from "./components/TaskList";
-import ItemDetails from "./pages/ItemDetails"; // new Item Details Page
-import About from "./pages/About"; // new about page
-import NotFound from "./pages/NotFound"; // new error page
-import Dashboard from "./pages/Dashboard"; // Corrected path for Dashboard
+import About from "./pages/About"; 
+import NotFound from "./pages/NotFound"; 
+import Dashboard from "./pages/Dashboard"; 
 import { Link } from "react-router-dom"; // Import Link component
 import "./App.css";
 
@@ -26,13 +25,13 @@ function App() {
   };
 
 
-
   // delete task based on ID
   const deleteTask = (taskId) => {
     const updatedTasks = myTasks.filter((task) => task.id !== taskId); // filter list and remove task with specific ID
     setMyTasks(updatedTasks); // display new task list without the removed task
   };
 
+  // layout and route
   return (
     <>
     <NavBar />
