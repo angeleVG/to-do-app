@@ -40,22 +40,8 @@ function App() {
     <div className="main-content"> {/*ensures there is space for content*/}
     <Routes>
       {/* Route for Dashboard */}
-      <Route path="/home" element={<Dashboard tasks={myTasks} deleteTask={deleteTask} addTask={addTask} />} 
-      />
-
-     {/* Route for TaskList 
-      <Route
-        path="/tasks"
-        element={
-          <>
-            <TaskList tasks={myTasks} deleteTask={deleteTask} />
-           add
-          </>
-         */}
-
-      {/* Route for ItemDetails */}
-      <Route path="/task/:id" element={<ItemDetails />} />
-
+      <Route path="/" element={<Dashboard tasks={myTasks} deleteTask={deleteTask} addTask={addTask} />} />
+      <Route path="/home" element={<Dashboard tasks={myTasks} deleteTask={deleteTask} addTask={addTask} />} />
       {/* Route for About */}
       <Route path="/about" element={<About />} />
       {/* Route for NotFound */}
