@@ -40,7 +40,7 @@ function App() {
     <div className="main-content"> {/*ensures there is space for content*/}
     <Routes>
       {/* Route for Dashboard */}
-      <Route path="/" element={<Dashboard tasks={myTasks} deleteTask={deleteTask} addTask={addTask} />} 
+      <Route path="/home" element={<Dashboard tasks={myTasks} deleteTask={deleteTask} addTask={addTask} />} 
       />
 
      {/* Route for TaskList 
