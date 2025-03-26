@@ -8,14 +8,18 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound"; 
 import Dashboard from "./pages/Dashboard"; 
 import { Link } from "react-router-dom"; // Import Link component
+import tasksData from "./data/tasks.json"; // import json file
 import "./App.css";
 
 function App() {
-  const [myTasks, setMyTasks] = useState([
-    { id: 1, task: "Get Money", isCompleted: true },
-    { id: 2, task: "Become Rich", isCompleted: true },
-    { id: 3, task: "Buy a Yacht", isCompleted: false },
-  ]);
+  const [myTasks, setMyTasks] = useState(tasksData); //Initialize state with data from the JSON file by using tasksData
+
+/* previous code 
+const [myTasks, setMyTasks] = useState([
+  { id: 1, task: "Get Money", isCompleted: true },
+  { id: 2, task: "Become Rich", isCompleted: true },
+  { id: 3, task: "Buy a Yacht", isCompleted: false },
+]);*/
 
   const addTask = () => {
     const newTask = { id: "test new", task: "test task", isCompleted: false };
