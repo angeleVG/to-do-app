@@ -1,20 +1,25 @@
 import TaskList from "../components/TaskList";
 
-function Dashboard({ tasks, deleteTask, addTask, task, setTask }) {
+function Dashboard({ tasks, deleteTask, addTask, task, setTask, toggleTaskCompletion }) {
   return (
     <div>
-      <TaskList tasks={tasks} deleteTask={deleteTask} />
-      {/* <button onClick={addTask}>Add</button> */}
-      {/* <button onClick={deleteTask}>Remove</button> */}
+      <TaskList 
+        tasks={tasks} 
+        deleteTask={deleteTask} 
+        toggleTaskCompletion={toggleTaskCompletion} // Pass the toggle function
+      />
+
+      {/* Form to add a new task */}
       <form onSubmit={addTask}>
-        <input 
-        type="text"
-        name="task" 
-        value={task} // as seen in class instead of title we use task because of our JSON file
-        onChange={ (e) => setTask(e.target.value) } // When the user types in the input, the task is updated with what was typed
-        placeholder="Enter a new task" />
-  <button type="submit">Add task</button>
-</form>
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)} // Updates the state with the current task input
+          placeholder="Enter a task"
+          required // Prevents adding empty tasks
+        />
+        <button type="submit">Add Task</button>
+      </form>
     </div>
   );
 }

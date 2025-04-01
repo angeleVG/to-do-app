@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
   const [myTasks, setMyTasks] = useState(tasksData); //Initialize state with data from the JSON file by using tasksData
-  const [task, setTask] = useState(''); // Added state for the task input field to prevent error
+  const [task, setTask] = useState(""); // Added state for the task input field to prevent error
 
   /* previous data 
 const [myTasks, setMyTasks] = useState([
@@ -30,25 +30,34 @@ const [myTasks, setMyTasks] = useState([
     setMyTasks(copyList);
   }; */
 
-  // add task (as seen in class)
   const addTask = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // ✅ Prevents page reload
 
-    // create another object to store the properties of the new task
-  const newTask = {
-    id: myTasks.length + 1, // creates a new unique id by adding 1 to the length of the existing tasks
-    task: task, // takes the currently typed task and saves it as the task
-    completed: false // sets the new task's status as not completed by default
+    if (!task.trim()) return; // ✅ Prevents adding empty tasks
+
+    const newTask = {
+      id: myTasks.length + 1, // ✅ Ensures unique ID
+      task: task, // ✅ Saves the entered text
+      completed: false, // ✅ Default status
+    };
+
+    setMyTasks([...myTasks, newTask]); // ✅ Updates state with new task
+    setTask(""); // ✅ Clears input field
   };
 
-  setMyTasks([...myTasks, newTask]); // add the new task to the list of tasks
-  setTask(""); // clear the task input field so it's empty after adding a task
-};
-
   // delete task based on ID
-  const deleteTask = (taskId) => { // function deletes a task based on its unique id
+  const deleteTask = (taskId) => {
+    // function deletes a task based on its unique id
     const updatedTasks = myTasks.filter((task) => task.id !== taskId); // creates a new list of tasks by removing the task with the matching id
     setMyTasks(updatedTasks); // display new list of tasks without the removed task
+  };
+
+  const toggleTaskCompletion = (taskId) => {
+    setMyTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, completed: !task.completed } : task
+      )
+    );
   };
 
   // layout and route
@@ -67,9 +76,10 @@ const [myTasks, setMyTasks] = useState([
               <Dashboard
                 tasks={myTasks}
                 deleteTask={deleteTask}
-                addTask={addTask} // passing the function to add a new task
-                task={task} // passing the current task value to the Dashboard
-                setTask={setTask} // passing the setTask function to update the task value
+                addTask={addTask}
+                task={task}
+                setTask={setTask}
+                toggleTaskCompletion={toggleTaskCompletion} // ✅ Pass the function
               />
             }
           />

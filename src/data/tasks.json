@@ -1,5 +1,5 @@
 [
-  { "id": 1, "task": "Read the project brief", "completed": true},
+  { "id": 1, "task": "Read the project brief", "completed": false},
   { "id": 2, "task": "Create a project repository", "completed": false},
   { "id": 3, "task": "Create React application using Vite", "completed": false},
   { "id": 4, "task": "Finish Day 1 Development Tasks", "completed": false},
