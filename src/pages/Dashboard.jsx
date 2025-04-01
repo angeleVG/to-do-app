@@ -3,14 +3,9 @@ import TaskList from "../components/TaskList";
 function Dashboard({ tasks, deleteTask, addTask, task, setTask, toggleTaskCompletion }) {
   return (
     <div>
-      <TaskList 
-        tasks={tasks} 
-        deleteTask={deleteTask} 
-        toggleTaskCompletion={toggleTaskCompletion} // Pass the toggle function
-      />
-
-      {/* Form to add a new task */}
-      <form onSubmit={addTask}>
+    <h1>To-Do List</h1>
+    {/* Form to add a new task */}
+    <form onSubmit={addTask}>
         <input
           type="text"
           value={task}
@@ -20,6 +15,13 @@ function Dashboard({ tasks, deleteTask, addTask, task, setTask, toggleTaskComple
         />
         <button type="submit">Add Task</button>
       </form>
+      <TaskList 
+        tasks={tasks} 
+        deleteTask={deleteTask} 
+        toggleTaskCompletion={toggleTaskCompletion} // Pass the toggle function
+      />
+
+      
     </div>
   );
 }

@@ -31,14 +31,14 @@ const [myTasks, setMyTasks] = useState([
   }; */
 
   const addTask = (e) => {
-    e.preventDefault(); // ✅ Prevents page reload
+    e.preventDefault(); 
 
-    if (!task.trim()) return; // ✅ Prevents adding empty tasks
+    if (!task.trim()) return; 
 
     const newTask = {
-      id: myTasks.length + 1, // ✅ Ensures unique ID
-      task: task, // ✅ Saves the entered text
-      completed: false, // ✅ Default status
+      id: myTasks.length + 1, 
+      task: task, 
+      completed: false, 
     };
 
     setMyTasks([...myTasks, newTask]); // ✅ Updates state with new task
