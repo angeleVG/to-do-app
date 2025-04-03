@@ -41,7 +41,7 @@ function TaskList({ tasks, deleteTask, toggleTaskCompletion, editTask }) {
               <>
                 {task.task}
                 <button onClick={() => handleEditClick(task)}>Edit</button>
-                <button onClick={() => deleteTask(task.id)}>x</button>
+                <button className = "deleteButton" onClick={() => deleteTask(task.id)}>Delete</button>
               </>
             )}
           </li>

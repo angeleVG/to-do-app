@@ -6,6 +6,17 @@ margin: 0;
 padding: 0;
 }
 
+.jersey-15-regular {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.app-name {
+  font-size: 40px;
+}
+
+
 body {
 min-height: 100vh;
 display: flex;
@@ -67,12 +78,36 @@ padding: 20px;
   box-sizing: border-box;
 }
 
+
+
+.main-list li {
+  display: flex; 
+  justify-content: flex-start;
+ gap: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: lightgray;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 50px;
+}
+
+.deleteButton {
+  margin-left: 100px;
+  background-color: blueviolet;
+  display: flex;
+}
+
 ul {
   list-style-type: none; /* displaying li's without bullets */
+
 }
 
 h1 {
   margin-bottom: 20px; /* create more space between titles and following content */
+  font-family: "jersey 15";
+  font-weight: normal;
+  font-size: 40px;
 }
 
 .go-back {
