@@ -83,13 +83,16 @@ const [myTasks, setMyTasks] = useState([
               />
             }
           />
-          <Route
+          /*<Route
             path="/home"
             element={
               <Dashboard
-                tasks={myTasks}
+              tasks={myTasks}
                 deleteTask={deleteTask}
                 addTask={addTask}
+                task={task}
+                setTask={setTask}
+                toggleTaskCompletion={toggleTaskCompletion} // ✅ Pass the function
               />
             }
           />
