@@ -1,6 +1,11 @@
 import TaskList from "../components/TaskList";
 
-function Dashboard({ tasks, deleteTask, addTask, task, setTask, toggleTaskCompletion }) {
+function Dashboard({ tasks, setTasks, deleteTask, addTask, task, setTask, toggleTaskCompletion }) {
+
+  const editTask = (id, newText) => {
+    setTasks(tasks.map(task => task.id === id ? { ...task, task: newText } : task));
+  };
+
   return (
     <div>
     <h1>To-Do List</h1>
@@ -19,6 +24,7 @@ function Dashboard({ tasks, deleteTask, addTask, task, setTask, toggleTaskComple
         tasks={tasks} 
         deleteTask={deleteTask} 
         toggleTaskCompletion={toggleTaskCompletion} // Pass the toggle function
+        editTask={editTask}
       />
 
       
