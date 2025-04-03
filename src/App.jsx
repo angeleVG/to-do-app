@@ -89,6 +89,7 @@ const [myTasks, setMyTasks] = useState([
             element={
               <Dashboard
                 tasks={myTasks}
+                setTasks={setMyTasks} 
                 deleteTask={deleteTask}
                 addTask={addTask}
                 task={task}
