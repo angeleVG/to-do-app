@@ -42,7 +42,9 @@ function TaskList({ tasks, deleteTask, toggleTaskCompletion, editTask }) {
                 {task.task}
                 <div className="button-container">
                 <button onClick={() => handleEditClick(task)}>Edit</button>
+                <img src="/icons/edit.png" alt="Edit" className="icon" />
                 <button onClick={() => deleteTask(task.id)}>Delete</button>
+                <img src="/icons/trash.png" alt="Delete" className="icon" />
                 </div>
               </>
             )}
