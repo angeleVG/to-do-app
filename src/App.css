@@ -120,6 +120,11 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  margin-top: 20px; /* create more space between titles and following content */
+  font-family: "jersey 15";
+  font-weight: normal;
+}
 .go-back {
   display: inline-block;
   margin-top: 16px;
