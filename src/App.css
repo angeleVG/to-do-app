@@ -78,8 +78,6 @@ padding: 20px;
   box-sizing: border-box;
 }
 
-
-
 .main-list li {
   display: flex; 
   justify-content: flex-start;
@@ -92,15 +90,14 @@ padding: 20px;
   border-radius: 50px;
 }
 
-.deleteButton {
-  margin-left: 100px;
-  background-color: blueviolet;
+.button-container {
+  margin-left:auto;
   display: flex;
+  gap: 10px;
 }
 
 ul {
   list-style-type: none; /* displaying li's without bullets */
-
 }
 
 h1 {
