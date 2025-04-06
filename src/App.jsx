@@ -15,20 +15,6 @@ function App() {
   const [myTasks, setMyTasks] = useState(tasksData); //Initialize state with data from the JSON file by using tasksData
   const [task, setTask] = useState(""); // Added state for the task input field to prevent error
 
-  /* previous data 
-const [myTasks, setMyTasks] = useState([
-  { id: 1, task: "Get Money", isCompleted: true },
-  { id: 2, task: "Become Rich", isCompleted: true },
-  { id: 3, task: "Buy a Yacht", isCompleted: false },
-]); */
-
-  /* previous add button 
-  const addTask = () => {
-    const newTask = { id: "test new", task: "test task", isCompleted: false };
-    const copyList = [...myTasks];
-    copyList.push(newTask);
-    setMyTasks(copyList);
-  }; */
 
   const addTask = (e) => {
     e.preventDefault(); 

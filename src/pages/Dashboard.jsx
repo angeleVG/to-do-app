@@ -10,7 +10,7 @@ function Dashboard({ tasks, setTasks, deleteTask, addTask, task, setTask, toggle
     <div>
     <h1>To-Do List</h1>
     {/* Form to add a new task */}
-    <form onSubmit={addTask}>
+    <form className="add-task-form" onSubmit={addTask}>
         <input
           type="text"
           value={task}

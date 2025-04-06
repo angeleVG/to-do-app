@@ -22,13 +22,17 @@ function TaskList({ tasks, deleteTask, toggleTaskCompletion, editTask }) {
       <ul>
         {tasks.map((task) => (
           <li key={task.id} style={{ textDecoration: task.completed ? "line-through" : "none" }}>
+          <label className="custom-checkbox">
             <input
               type="checkbox"
               checked={task.completed}
               onChange={() => toggleTaskCompletion(task.id)}
             />
+            <span className="checkmark"></span>
+            </label>
        {editingTaskId === task.id ? (
               <>
+                
                 <input
                   type="text"
                   value={editedText}
