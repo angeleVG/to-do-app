@@ -41,10 +41,13 @@ function App() {
   const toggleTaskCompletion = (taskId) => {
     setMyTasks((prevTasks) =>
       prevTasks.map((task) =>
-        task.id === taskId ? { ...task, completed: !task.completed } : task
+        task.id === taskId
+          ? { ...task, completed: !task.completed } // Toggle only the task that matches
+          : task
       )
     );
   };
+  
 
   // layout and route
   return (
