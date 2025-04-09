@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 function TaskList({ tasks, deleteTask, toggleTaskCompletion, editTask }) {
 
   const [editingTaskId, setEditingTaskId] = useState(null);
@@ -45,7 +47,7 @@ function TaskList({ tasks, deleteTask, toggleTaskCompletion, editTask }) {
               </>
             ) : (
               <>
-                {task.task}
+              <Link to={`/task/${task.id}`} className="task-link">{task.task}</Link>
                 <div className="button-container">
                 <button className="edit" onClick={() => handleEditClick(task)}><img src="/icons/edit.png" alt="Edit" className="icon" /></button>
                 <button className="delete" onClick={() => deleteTask(task.id)}><img src="/icons/trash.png" alt="Delete" className="icon" /></button>

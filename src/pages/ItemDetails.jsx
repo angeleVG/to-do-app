@@ -1,25 +1,38 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function TaskDetails({ tasks }) {
-    const { id } = useParams();
-    const task = tasks.find((t) => t.id === parseInt(id));
-    const [details, setDetails] = useState("");
+function ItemDetails({ tasks, updateItemDetails }) {
+  const { id } = useParams();
+  const task = tasks.find((t) => t.id === parseInt(id));
 
-    if (!task) return <p>No task found.</p>
+  const [details, setDetails] = useState("");
 
-    return (
-        <div className="task-details-page">
-          <h2>{task.task}</h2>
-          <textarea
-           value={details}
-        onChange={(e) => setDetails(e.target.value)}
-        placeholder="Add more details..."
-        rows={10}
-        cols={40}
-      />
-    </div>
-      );
+  useEffect(() => {
+    if (task) {
+      setDetails(task.details || "");
     }
+  }, [task]);
 
-    export default ItemDetails
+  const handleSaveDetails = () => {
+    const updatedTask = { ...task, details };
+    console.log("Geüpdatete taak:", updatedTask);
+  };
+
+  if (!task) return <p>No task found</p>;
+
+  return (
+    <div className="item-details-page">
+      <h2>{task.task}</h2>
+      <textarea
+        value={details}
+        onChange={(e) => setDetails(e.target.value)}
+        placeholder="Add details..."
+        rows={10}
+        cols={50}
+      />
+         <button onClick={handleSaveDetails}>Save</button>
+    </div>
+  );
+}
+
+export default ItemDetails;
