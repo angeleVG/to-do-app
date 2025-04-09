@@ -281,4 +281,18 @@ h3 {
 
 
 
+.textarea-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+}
 
+textarea {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.textarea-container button {
+  width: auto;
+  align-self: flex-start;
+}

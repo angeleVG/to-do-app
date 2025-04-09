@@ -5,13 +5,15 @@ function ItemDetails({ tasks, setTasks }) {
   const { id } = useParams();
   const task = tasks.find((t) => t.id === parseInt(id));
 
-  const [details, setDetails] = useState(() => task ? task.details : "");
+  const [details, setDetails] = useState(() => {
+    return localStorage.getItem(`task-${id}-details`) || (task ? task.details : "");
+  });
 
   useEffect(() => {
-    if (task) {
-      setDetails(task.details || "");
+    if (details) {
+      localStorage.setItem(`task-${id}-details`, details);
     }
-  }, [task]);
+  }, [details, id]);
 
   const handleSaveDetails = () => {
     const updatedTask = { ...task, details }; 
@@ -25,14 +27,15 @@ function ItemDetails({ tasks, setTasks }) {
   if (!task) return <p>No task found</p>;
 
   return (
-    <div className="item-details-page">
+      <div className="textarea-container">
       <h2>{task.task}</h2>
       <textarea
         value={details}
         onChange={(e) => setDetails(e.target.value)} // Update details state whilst typing
-        placeholder="Add details..."
+        placeholder=" Add details..."
         rows={10}
         cols={50}
+        autoFocus 
       />
       <button onClick={handleSaveDetails}>Save</button>
     </div>
