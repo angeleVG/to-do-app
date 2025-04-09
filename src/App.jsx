@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import { Link } from "react-router-dom"; // Import Link component
 import tasksData from "./data/tasks.json"; // import json file
+import ItemDetails from "./pages/ItemDetails";
 import "./App.css";
 
 function App() {
@@ -91,6 +92,11 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* Route for NotFound */}
           <Route path="*" element={<NotFound />} />
+              {/* Route for ItemDetails */}
+          <Route
+  path="/task/:id"
+  element={<ItemDetails tasks={myTasks} />}
+/>
         </Routes>
       </div>
       <Footer />
