@@ -100,6 +100,7 @@ p {
   flex: 1;
   width: calc(100% - 220px);
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .main-list li {
@@ -288,6 +289,8 @@ h3 {
 textarea {
   width: 300px;
   border-radius: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .textarea-container button {
@@ -295,7 +298,3 @@ textarea {
   align-self: flex-start;
 }
 
-textarea::placeholder {
-  padding-top: 5px;  
-  padding-left: 5px;
-}
