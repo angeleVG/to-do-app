@@ -58,9 +58,29 @@ p {
   padding: 20px;
 }
 
-.side-navigation li {
-  padding: 10px;
+.side-navigation ul {
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.side-navigation li a {
+  display: block;
+  padding: 4px 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.side-navigation li a:hover {
+  color: #5e17eb;
+  font-weight: bold;
+}
+
+
+
 
 .footer {
   position: fixed;
@@ -241,3 +261,24 @@ h3 {
 .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
   content: "✔";
 }
+
+.avatar-img {
+  margin-top: 80px;
+  height: 150px;
+}
+
+.avatar-container {
+  display: flex;
+  gap: 10rem;
+  
+  flex-wrap: wrap;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+
+
+
+
