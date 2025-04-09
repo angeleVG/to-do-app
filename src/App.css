@@ -279,8 +279,6 @@ h3 {
 }
 
 
-
-
 .textarea-container {
   display: flex;
   flex-direction: column; 
@@ -295,4 +293,9 @@ textarea {
 .textarea-container button {
   width: auto;
   align-self: flex-start;
+}
+
+textarea::placeholder {
+  padding-top: 5px;  
+  padding-left: 5px;
 }

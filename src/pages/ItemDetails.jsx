@@ -32,10 +32,9 @@ function ItemDetails({ tasks, setTasks }) {
       <textarea
         value={details}
         onChange={(e) => setDetails(e.target.value)} // Update details state whilst typing
-        placeholder=" Add details..."
+        placeholder="Add details..."
         rows={10}
-        cols={50}
-        autoFocus 
+        cols={40}
       />
       <button onClick={handleSaveDetails}>Save</button>
     </div>
