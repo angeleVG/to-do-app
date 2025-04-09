@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 function SideBar () {
     return(
     <aside className="side-navigation">
+    <img src='../assets/react.svg'/>
     <ul>
         <li><Link to="/home">Home</Link></li> {/* new link to Dashboard.jsx */}
         <li><Link to="/about">About</Link></li> {/* new link to About page */}

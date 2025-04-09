@@ -2,17 +2,23 @@ function About() {
   return (
     <div>
       <h1>Todology App</h1>
-      <p>A simple To-do app allowing the user to create and manage tasks, as well as check off (or uncheck) the existing tasks when completed.</p>
-  <h2>Santiago Villa:</h2>
-  <ul>
-    <li> https://www.linkedin.com/in/villa-santiago</li>
-    <li>https://github.com/villa-santiago</li>
-  </ul>
-  <h2>Angèle van Groesen:</h2>
-  <ul>
-    <li>https://www.linkedin.com/in/angelevangroesen</li>
-    <li>https://github.com/angeleVG</li>
-  </ul>
+      <h2>
+        A simple To-do app allowing the user to create and manage tasks, as well
+        as check off (or uncheck) the existing tasks when completed.
+      </h2>
+
+      <h3>Angèle van Groesen:</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/angelevangroesen">LinkedIn</a></li>
+        <li><a href="https://github.com/angeleVG">GitHub</a></li>
+      </ul>
+
+
+      <h3>Santiago Villa:</h3>
+      <ul>
+      <li><a href="https://www.linkedin.com/in/villa-santiago">LinkedIn</a></li>
+        <li><a href="https://github.com/villa-santiago">GitHub</a></li>
+      </ul>
     </div>
   );
 }

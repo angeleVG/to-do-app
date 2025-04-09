@@ -12,6 +12,7 @@
 
 .app-name {
   font-size: 40px;
+  color: #5e17eb;
 }
 
 
@@ -19,6 +20,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+p {
+  font-family: "Inter", sans-serif;
 }
 
 .navigation {
@@ -29,7 +34,7 @@ body {
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: azure;
+  border-bottom: 1px solid #5e17eb;
   width: 100%;
   z-index: 1000;
   height: 60px;
@@ -44,7 +49,7 @@ body {
 
 
 .side-navigation {
-  background-color: lightgray;
+  font-family: "Inter", sans-serif;
   position: fixed;
   top: 60px;
   left: 0;
@@ -62,8 +67,9 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(213, 243, 229);
-  text-align: center;
+  border-top: 1px solid #5e17eb;
+  background-color: white;
+  text-align: left;
   padding: 10px;
 }
 
@@ -96,7 +102,7 @@ body {
   max-width: 500px;
   padding: 10px;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 1px solid darkgrey;
   background-color: transparent; /* no fill */
 }
 
@@ -110,7 +116,7 @@ body {
 }
 
 .add-task-form button {
-  background-color: rgb(0, 0, 0);
+  background-color: #5e17eb;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -121,8 +127,7 @@ body {
 }
 
 .add-task-form button:hover {
-  background-color: green; /* slightly lighter black */
-  transform: scale(1.02); /* gentle lift on hover */
+  background-color: green; 
 }
 
 
@@ -156,22 +161,33 @@ body {
 
 ul {
   list-style-type: none;
-  /* displaying li's without bullets */
+  font-family: "Inter", sans-serif;
 }
+
+ul li a {
+  text-decoration: none;
+}
+
 
 h1 {
   margin-bottom: 20px;
-  /* create more space between titles and following content */
-  font-family: "jersey 15";
-  font-weight: normal;
-  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 36px;
 }
 
 h2 {
   margin-top: 20px;
-  /* create more space between titles and following content */
-  font-family: "jersey 15";
+  font-family: "Inter", sans-serif;
   font-weight: normal;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
 }
 
 .go-back {
