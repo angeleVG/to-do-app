@@ -134,8 +134,6 @@
 
   <li>Implement routing and 404 page</li> 
 
-  <li>Deploy the app</li> 
-
 </ul> 
 
  
