@@ -5,9 +5,9 @@ function ItemDetails({ tasks, setTasks }) {
   const { id } = useParams();
   const task = tasks.find((t) => t.id === parseInt(id));
 
-  const [details, setDetails] = useState(() => {
-    return localStorage.getItem(`task-${id}-details`) || (task ? task.details : "");
-  });
+  // this only pulls task.details from your state, which gets updated properly.
+  // This prevents old localStorage data from showing up on new tasks that reuse previous IDs.
+  const [details, setDetails] = useState(() => (task ? task.details : "")); 
 
   useEffect(() => {
     if (details) {

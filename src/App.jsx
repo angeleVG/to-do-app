@@ -22,10 +22,17 @@ function App() {
 
     if (!task.trim()) return; 
 
+// 11-04 new block of code that generates a new unique ID by finding the highest current ID and adding 1.
+// If there are no tasks yet, it starts with ID 1.
+const newId = myTasks.length > 0
+? Math.max(...myTasks.map(t => t.id)) + 1
+: 1;
+
     const newTask = {
-      id: myTasks.length + 1, 
+      id: newId, // 11-04 something new, this was previously myTasks.length + 1, 
       task: task, 
       completed: false, 
+      details: "",
     };
 
     setMyTasks([...myTasks, newTask]); // ✅ Updates state with new task

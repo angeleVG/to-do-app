@@ -39,6 +39,7 @@ p {
   z-index: 1000;
   height: 60px;
   padding: 10px 20px;
+  background-color: white;
 }
 
 .logo {
@@ -89,8 +90,10 @@ p {
   width: 100%;
   border-top: 1px solid #5e17eb;
   background-color: white;
-  text-align: left;
+  text-align: right;
   padding: 10px;
+font-size: 12px;
+color: lightslategray;
 }
 
 .main-content {
